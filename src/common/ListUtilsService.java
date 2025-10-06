@@ -24,6 +24,18 @@ public class ListUtilsService {
                 .toList();
     }
 
+    public static List<String> sortByE(List<String> items) {
+        return items.stream()
+                .sorted((a, b) -> {
+                    boolean aHasE = a.contains("e");
+                    boolean bHasE = b.contains("e");
+                    if (aHasE == bHasE)
+                        return a.compareToIgnoreCase(b);
+                    return aHasE ? -1 : 1;
+                })
+                .toList();
+    }
+
     public static List<String> replaceA(List<String> items) {
         return items.stream()
                 .map(item -> item.replaceAll("(?i)a", "4"))

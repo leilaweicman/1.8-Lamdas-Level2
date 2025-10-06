@@ -14,6 +14,9 @@ public class Main {
         List<String> sortedByFirstCharacter = ListUtilsService.sortByFirstCharacter(items);
         System.out.println("Sorted by first Char: " + sortedByFirstCharacter);
 
+        List<String> sortedByE = ListUtilsService.sortByE(items);
+        System.out.println("Sorted by E: " + sortedByE);
+
         List<String> replacedA = ListUtilsService.replaceA(items);
         System.out.println("Replaced A: " + replacedA);
 
