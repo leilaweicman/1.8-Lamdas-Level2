@@ -24,6 +24,12 @@ public class ListUtilsService {
                 .toList();
     }
 
+    public static List<String> replaceA(List<String> items) {
+        return items.stream()
+                .map(item -> item.replaceAll("(?i)a", "4"))
+                .toList();
+    }
+
     private static boolean isEven(int number) {
         return number % 2 == 0;
     }
