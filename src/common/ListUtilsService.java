@@ -30,6 +30,12 @@ public class ListUtilsService {
                 .toList();
     }
 
+    public static List<String> numericElements(List<String> items) {
+        return items.stream()
+                .filter(item -> item.chars().allMatch(Character::isDigit))
+                .toList();
+    }
+
     private static boolean isEven(int number) {
         return number % 2 == 0;
     }

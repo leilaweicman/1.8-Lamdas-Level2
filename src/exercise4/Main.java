@@ -17,5 +17,8 @@ public class Main {
         List<String> replacedA = ListUtilsService.replaceA(items);
         System.out.println("Replaced A: " + replacedA);
 
+        List<String> numericElements = ListUtilsService.numericElements(items);
+        System.out.println("Numeric Elements: " + numericElements);
+
     }
 }
