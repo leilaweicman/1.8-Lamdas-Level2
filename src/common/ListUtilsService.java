@@ -2,6 +2,7 @@ package common;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class ListUtilsService {
@@ -27,8 +28,8 @@ public class ListUtilsService {
     public static List<String> sortByE(List<String> items) {
         return items.stream()
                 .sorted((a, b) -> {
-                    boolean aHasE = a.contains("e");
-                    boolean bHasE = b.contains("e");
+                    boolean aHasE = a.toLowerCase().contains("e");
+                    boolean bHasE = b.toLowerCase().contains("e");
                     if (aHasE == bHasE)
                         return a.compareToIgnoreCase(b);
                     return aHasE ? -1 : 1;
